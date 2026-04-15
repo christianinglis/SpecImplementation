@@ -4,8 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+<h2>Pathfinding Visualizer</h2>
+
+<button onclick="setMode('wall')">Wall</button>
+<button onclick="setMode('start')">Move Start</button>
+<button onclick="setMode('goal')">Move Goal</button>
+<button onclick="runBFS()">Run BFS</button>
+<button onclick="runGrid()">Reset Grid</button>
+
+<div id="grid"></div>
+
+<script src="script.js"></script>
     
 </body>
 </html>

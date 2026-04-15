@@ -1,0 +1,31 @@
+#grid{
+    display: grid;
+    margin-top: 20px;
+}
+
+.cell {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #ddd;
+    background: white;
+}
+
+.start {
+    background: green;
+}
+
+.goal {
+    background: red;
+}
+
+.wall {
+    background: black;
+}
+
+.visited {
+    background: lightblue;
+}
+
+.path {
+    background: yellow;
+}
