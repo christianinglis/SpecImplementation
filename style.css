@@ -1,3 +1,4 @@
+body{background-color: green;}
 #grid{
     display: grid;
     margin-top: 20px;
