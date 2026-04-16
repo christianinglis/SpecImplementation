@@ -139,3 +139,32 @@ while (queue.length > 0) {
 drawPath();
 draw();
 }
+
+function drawPath() {
+
+    let path = [];
+    let current = goal;
+
+    while (current) {
+
+        let r = current[0];
+        let c = current[1];
+
+        path.push([r,c]);
+
+        current = grid[r][c].prev;
+    }
+
+    for (let i = 0; i < path.length; i++) {
+
+        let r = path[i][0];
+        let c = path[i][1];
+
+        if ((r === start[0] && c === start[1]) ||
+         (r === goal[0] && c === goal[1])) continue;
+
+         grid[r][c].el.classList.add("path");
+    }
+}
+
+function
