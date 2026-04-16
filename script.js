@@ -37,10 +37,10 @@ function makeGrid() {
             });
         }
 
-        grid.push(row); // ✅ missing push
+        grid.push(row);
     }
 
-    draw(); // ✅ was inside loop incorrectly
+    draw(); 
 }
 
 function setMode(m) {
@@ -73,9 +73,9 @@ function draw() {
         for (let c = 0; c < cols; c++) {
             let cell = grid[r][c].el;
 
-            cell.className = "cell"; // ✅ classname → className
+            cell.className = "cell"; 
 
-            if (r === start[0] && c === start[1]) { // ✅ removed quotes
+            if (r === start[0] && c === start[1]) { 
                 cell.classList.add("start");
             } else if (r === goal[0] && c === goal[1]) {
                 cell.classList.add("goal");
@@ -97,7 +97,7 @@ function runBFS() {
         }
     }
 
-    let queue = []; // ✅ moved inside function
+    let queue = [];
     queue.push(start);
 
     grid[start[0]][start[1]].visited = true;
@@ -131,7 +131,7 @@ function runBFS() {
                 grid[nr][nc].visited = true;
                 grid[nr][nc].prev = current;
 
-                queue.push([nr, nc]); // ✅ missing bracket fixed
+                queue.push([nr, nc]);
             }
         }
     }
