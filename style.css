@@ -12,11 +12,11 @@ body{background-color: green;}
 }
 
 .start {
-    background: green;
+    background: brown;
 }
 
 .goal {
-    background: red;
+    background: green;
 }
 
 .wall {
