@@ -7,6 +7,11 @@ let mode = "wall";
 let start = [0, 0];
 let goal = [11, 7];
 
+let mouseDown = false;
+
+document.body.onmousedown = () => mouseDown = true;
+document.body.onmouseup = () => mouseDown = false;
+
 function makeGrid() {
     let container = document.getElementById("grid");
     container.innerHTML = "";
@@ -21,9 +26,15 @@ function makeGrid() {
             let cell = document.createElement("div");
             cell.classList.add("cell");
 
-            cell.onclick = function () {
-                clickCell(r, c);
-            };
+            cell.onmousedown = function () {
+    clickCell(r, c);
+};
+
+cell.onmouseenter = function () {
+    if (mouseDown) {
+        clickCell(r, c);
+    }
+};
 
             container.appendChild(cell);
 
